@@ -55,15 +55,17 @@ Endpoint Indexes are
 
 The example below sends 1 token from Arbitrum to ETH
 
+WARNING: THIS SCRIPT ASSUMES YOUR TOKEN ADDRESSES ARE THE SAME ON ALL CHAINS
+
 For Testnet
 ```shell
-forge script SendLzTokens -s "sendTokensTestnet(address,uint256, address, uint256, uint256)" 0xd4080966b8656b34a86e6b9089d34edf1419826f 1000000000000000000 YOUR_KEY_ADDRESS 1 0 --force --multi --legacy --broadcast
+forge script SendLzTokens -s "sendTokensTestnet(address,uint256, address, uint256, uint256)" YOUR_TOKEN_ADDRESS 1000000000000000000 YOUR_KEY_ADDRESS 1 0 --force --multi --legacy --broadcast
 ```
 
 For Mainnet
 
 ```shell
-forge script SendLzTokens -s "sendTokensMainnet(address,uint256, address, uint256, uint256)" 0xd4080966b8656b34a86e6b9089d34edf1419826f 1000000000000000000 0x50875e20f88c2fba27d0c4ee2649d520ea7b2952 1 0 --force --multi --legacy --broadcast
+forge script SendLzTokens -s "sendTokensMainnet(address,uint256, address, uint256, uint256)" YOUR_TOKEN_ADDRESS 1000000000000000000 YOUR_KEY_ADDRESS 1 0 --force --multi --legacy --broadcast
 ```
 
 
