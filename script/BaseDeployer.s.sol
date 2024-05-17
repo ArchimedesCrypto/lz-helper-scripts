@@ -101,13 +101,13 @@ contract BaseDeployer is Script {
     modifier setEnvMintAndSend(Cycle cycle) {
         if (cycle == Cycle.Dev) {
             deployerPrivateKey = vm.envUint("LOCAL_DEPLOYER_KEY");
-            proxyAmbrosiaAddress = vm.envAddress("LOCAL_AMBROSIA_PROXY_ADDRESS");
+            proxyAmbrosiaAddress = vm.envAddress("LOCAL_TOKEN_ADDRESS");
         } else if (cycle == Cycle.Test) {
-            deployerPrivateKey = vm.envUint("TEST_DEPLOYER_KEY");
-            proxyAmbrosiaAddress = vm.envAddress("TEST_AMBROSIA_PROXY_ADDRESS");
+            deployerPrivateKey = vm.envUint("TESTNET_DEPLOYER_KEY");
+            proxyAmbrosiaAddress = vm.envAddress("TESTNET_TOKEN_ADDRESS");
         } else {
             deployerPrivateKey = vm.envUint("DEPLOYER_KEY");
-            proxyAmbrosiaAddress = vm.envAddress("AMBROSIA_PROXY_ADDRESS");
+            proxyAmbrosiaAddress = vm.envAddress("TOKEN_ADDRESS");
         }
 
         _;
