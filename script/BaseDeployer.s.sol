@@ -139,21 +139,21 @@ contract BaseDeployer is Script {
         forks[Chains.OptimismGoerli] = "optimismgoerli";
         forks[Chains.Moonriver] = "moonriver";
         forks[Chains.Shiden] = "shiden";
-        forks[Chains.Sepolia] = "https://ethereum-sepolia.publicnode.com";
-        forks[Chains.ArbitrumSepolia] = "https://arbitrum-sepolia.blockpi.network/v1/rpc/public";
+        forks[Chains.Sepolia] = "sepolia";
+        forks[Chains.ArbitrumSepolia] = "arbitrumsepolia";
 
         // Mainnet
-        forks[Chains.Ethereum] = "https://mainnet.infura.io/v3/10e5f9524a184da3bd3068ff106041df";
+        forks[Chains.Ethereum] = "ethereum";
         forks[Chains.Polygon] = "polygon";
         forks[Chains.Bsc] = "bsc";
         forks[Chains.Avalanche] = "avalanche";
-        forks[Chains.Arbitrum] = "https://rpc.ankr.com/arbitrum/4c4c7dca7cf7345d4b260226ad238117fb2472a11564b6139ddaa3b3206ba273";
+        forks[Chains.Arbitrum] = "arbitrum";
         forks[Chains.Optimism] = "optimism";
         forks[Chains.Moonbeam] = "moonbeam";
         forks[Chains.Astar] = "astar";
 
-        forks[Chains.BaseSepolia] = "https://rpc.ankr.com/base_sepolia/4c4c7dca7cf7345d4b260226ad238117fb2472a11564b6139ddaa3b3206ba273";
-        forks[Chains.Base] = "https://base.llamarpc.com/sk_llama_2e46dd427b1252c175ae19968c611851";
+        forks[Chains.BaseSepolia] = "basesepolia";
+        forks[Chains.Base] = "base";
     }
 
     function createFork(Chains chain) public {
